@@ -1,0 +1,75 @@
+2025-09-18 15:37:05,526 :: INFO :: Requesting path from algo...
+2025-09-18 15:37:05,526 :: INFO :: data: {'obstacles': [{'id': 1, 'x': 2, 'y': 1, 'd': 0}], 'mode': '0'}
+2025-09-18 15:37:05,526 :: DEBUG :: Commands received from API: ['FW01', 'SNAP1_A', 'FIN']
+2025-09-18 15:37:05,526 :: INFO :: Commands and path received Algo API. Robot is ready to move.
+2025-09-18 15:37:05,527 :: INFO :: Capturing image for obstacle id: 1
+2025-09-18 15:37:06,038 :: DEBUG :: Requesting from image API
+2025-09-18 15:37:06,038 :: INFO :: results: {'image_id': '1', 'symbol': 'A', 'obstacle_id': 1}
+2025-09-18 15:37:06,038 :: INFO :: self.obstacles: {1: {'id': 1, 'x': 2, 'y': 1, 'd': 0}}
+2025-09-18 15:37:06,039 :: INFO :: Image recognition results: {'image_id': '1', 'symbol': 'A', 'obstacle_id': 1} (None)
+2025-09-18 15:37:06,039 :: INFO :: self.success_obstacles: [{'id': 1, 'x': 2, 'y': 1, 'd': 0}]
+2025-09-18 15:37:06,040 :: INFO :: Images stitched!
+2025-09-18 15:47:46,694 :: DEBUG :: Set obstacles PiAction added to queue: {'cat': 'obstacles', 'value': {'obstacles': [{'id': 1, 'x': 2, 'y': 1, 'd': 0}], 'mode': '0'}}
+2025-09-18 15:47:46,695 :: DEBUG :: PiAction retrieved from queue: obstacles {'obstacles': [{'id': 1, 'x': 2, 'y': 1, 'd': 0}], 'mode': '0'}
+2025-09-18 15:47:46,695 :: INFO :: Requesting path from algo...
+2025-09-18 15:47:46,696 :: INFO :: data: {'obstacles': [{'id': 1, 'x': 2, 'y': 1, 'd': 0}], 'mode': '0'}
+2025-09-18 15:47:46,697 :: DEBUG :: Commands received from API: ['RS00', 'FW01', 'SNAP1_A', 'FIN']
+2025-09-18 15:47:46,697 :: INFO :: Commands and path received Algo API. Robot is ready to move.
+2025-09-18 15:47:46,697 :: DEBUG :: wait for unpause
+2025-09-18 15:47:46,698 :: DEBUG :: wait for retrylock
+2025-09-18 15:47:46,699 :: DEBUG :: wait for unpause
+2025-09-18 15:47:47,193 :: DEBUG :: API is up!
+2025-09-18 15:47:47,193 :: DEBUG :: ACK for RS00 from STM32 received.
+2025-09-18 15:47:47,195 :: INFO :: Gryo reset!
+2025-09-18 15:47:47,195 :: WARNING :: Tried to release a released lock!
+2025-09-18 15:47:47,196 :: INFO :: Start command received, starting robot on path!
+2025-09-18 15:47:47,196 :: DEBUG :: wait for movelock
+2025-09-18 15:47:47,198 :: DEBUG :: Sending to STM32: RS00
+2025-09-18 15:47:47,199 :: DEBUG :: wait for unpause
+2025-09-18 15:47:47,200 :: DEBUG :: wait for retrylock
+2025-09-18 15:47:47,201 :: DEBUG :: wait for unpause
+2025-09-18 15:47:47,202 :: DEBUG :: wait for movelock
+2025-09-18 16:14:41,049 :: DEBUG :: Set obstacles PiAction added to queue: {'cat': 'obstacles', 'value': {'obstacles': [{'id': 1, 'x': 2, 'y': 1, 'd': 0}], 'mode': '0'}}
+2025-09-18 16:14:41,052 :: DEBUG :: PiAction retrieved from queue: obstacles {'obstacles': [{'id': 1, 'x': 2, 'y': 1, 'd': 0}], 'mode': '0'}
+2025-09-18 16:14:41,052 :: INFO :: Requesting path from algo...
+2025-09-18 16:14:41,053 :: INFO :: data: {'obstacles': [{'id': 1, 'x': 2, 'y': 1, 'd': 0}], 'mode': '0'}
+2025-09-18 16:14:41,053 :: DEBUG :: Commands received from API: ['RS00', 'FW01', 'SNAP1_A', 'FIN']
+2025-09-18 16:14:41,054 :: INFO :: Commands and path received Algo API. Robot is ready to move.
+2025-09-18 16:14:41,054 :: DEBUG :: wait for unpause
+2025-09-18 16:14:41,055 :: DEBUG :: wait for retrylock
+2025-09-18 16:14:41,055 :: DEBUG :: wait for unpause
+2025-09-18 16:14:41,549 :: DEBUG :: API is up!
+2025-09-18 16:14:41,551 :: INFO :: Gryo reset!
+2025-09-18 16:14:41,553 :: INFO :: Start command received, starting robot on path!
+2025-09-18 16:14:41,553 :: DEBUG :: wait for movelock
+2025-09-18 16:14:41,556 :: DEBUG :: Sending to STM32: RS00
+2025-09-18 16:14:41,558 :: DEBUG :: wait for unpause
+2025-09-18 16:14:41,559 :: DEBUG :: wait for retrylock
+2025-09-18 16:14:41,560 :: DEBUG :: wait for unpause
+2025-09-18 16:14:41,561 :: DEBUG :: wait for movelock
+2025-09-18 16:14:41,754 :: DEBUG :: ACK for RS00 from STM32 received.
+2025-09-18 16:14:41,957 :: DEBUG :: ACK from STM32 received, movement lock released.
+2025-09-18 16:14:41,957 :: DEBUG :: Sending to STM32: FW01
+2025-09-18 16:14:41,960 :: DEBUG :: wait for unpause
+2025-09-18 16:14:41,961 :: INFO :: self.current_location = {'x': 2, 'y': 1, 'd': 0}
+2025-09-18 16:14:41,962 :: DEBUG :: wait for retrylock
+2025-09-18 16:14:41,963 :: DEBUG :: wait for unpause
+2025-09-18 16:14:41,965 :: DEBUG :: wait for movelock
+2025-09-18 16:14:42,359 :: DEBUG :: ACK from STM32 received, movement lock released.
+2025-09-18 16:14:42,360 :: DEBUG :: wait for unpause
+2025-09-18 16:14:42,360 :: DEBUG :: PiAction retrieved from queue: snap 1_A
+2025-09-18 16:14:42,362 :: DEBUG :: wait for retrylock
+2025-09-18 16:14:42,362 :: WARNING :: Tried to release a released lock!
+2025-09-18 16:14:42,362 :: INFO :: Capturing image for obstacle id: 1
+2025-09-18 16:14:42,364 :: DEBUG :: wait for unpause
+2025-09-18 16:14:42,371 :: DEBUG :: wait for movelock
+2025-09-18 16:14:42,868 :: DEBUG :: Requesting from image API
+2025-09-18 16:14:42,871 :: INFO :: results: {'image_id': '1', 'symbol': 'A', 'obstacle_id': 1}
+2025-09-18 16:14:42,872 :: INFO :: At FIN, self.failed_obstacles: []
+2025-09-18 16:14:42,874 :: INFO :: self.obstacles: {1: {'id': 1, 'x': 2, 'y': 1, 'd': 0}}
+2025-09-18 16:14:42,874 :: INFO :: At FIN, self.current_location: {'x': 2, 'y': 1, 'd': 0}
+2025-09-18 16:14:42,878 :: INFO :: Image recognition results: {'image_id': '1', 'symbol': 'A', 'obstacle_id': 1} (None)
+2025-09-18 16:14:42,879 :: INFO :: Commands queue finished.
+2025-09-18 16:14:42,881 :: INFO :: self.success_obstacles: [{'id': 1, 'x': 2, 'y': 1, 'd': 0}]
+2025-09-18 16:14:42,882 :: DEBUG :: PiAction retrieved from queue: stitch 
+2025-09-18 16:14:42,883 :: INFO :: Images stitched!
