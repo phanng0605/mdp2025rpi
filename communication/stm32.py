@@ -56,7 +56,8 @@ class STMLink(Link):
         Args:
             message (str): message to send
         """
-        self.serial_link.write(f"{message}".encode("utf-8"))
+        # Ensure commands are CRLF-terminated so STM32 parser can read a full line
+        self.serial_link.write(f"{message}\r\n".encode("utf-8"))
         self.logger.debug(f"Sent to STM32: {message}")
 
     def recv(self) -> Optional[str]:

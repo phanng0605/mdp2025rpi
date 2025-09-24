@@ -52,6 +52,8 @@ class RaspberryPi:
 
         self.android_dropped = self.manager.Event()
         self.unpause = self.manager.Event()
+        # Synchronize start: wait for RS00 ACK before first move
+        self.rs_event = self.manager.Event()
 
         self.movement_lock = self.manager.Lock()
 
@@ -198,6 +200,9 @@ class RaspberryPi:
                     if not self.command_queue.empty():
                         self.logger.info("Gryo reset!")
                         self.stm_link.send("RS00")
+                        # Wait for RS00 ACK to ensure STM32 is ready before first move
+                        if not self.rs_event.wait(timeout=2.0):
+                            self.logger.warning("RS00 ACK not received within 2s; proceeding anyway.")
                         # Main trigger to start movement #
                         self.unpause.set()
                         self.logger.info(
@@ -217,12 +222,14 @@ class RaspberryPi:
         [Child Process] Receive acknowledgement messages from STM32, and release the movement lock
         """
         while True:
-
+            
             message: str = self.stm_link.recv()
 
             if message.startswith("ACK"):
                 if self.rs_flag == False:
                     self.rs_flag = True
+                    # Signal RS00 acknowledged so first movement can proceed
+                    self.rs_event.set()
                     self.logger.debug("ACK for RS00 from STM32 received.")
                     continue
                 try:
